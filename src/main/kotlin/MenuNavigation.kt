@@ -31,6 +31,10 @@ class MenuNavigation {
     companion object {
         val archives : MutableList<Archive> = mutableListOf()
 
+        fun printNullText(){
+            println("Вы не ввели текст, попробуйте еще")
+        }
+
         fun navigationInput(title: String, navigation: List<String>, function: (Int) -> Unit) {
             println(title)
             navigation.forEachIndexed { index, s ->

@@ -4,7 +4,7 @@ class CreareNote(nextScreen: (Screens, InfoObject?) -> Unit, exitScreen: () -> U
         println("Введите название Заметки и нажмите ENTER")
         val noteName = readLine()?.trim()
         if (!InfoObject.checkName(noteName)) {
-            println("Вы не ввели текст, попробуйте еще раз")
+            MenuNavigation.printNullText()
             printContent()
         }
         println("Введите текст заметки")
@@ -14,7 +14,7 @@ class CreareNote(nextScreen: (Screens, InfoObject?) -> Unit, exitScreen: () -> U
             archive.addNote(noteName!!, noteText!!)
             exit()
         } else {
-            println("Вы не ввели текст, попробуйте еще")
+            MenuNavigation.printNullText()
             printContent()
         }
     }

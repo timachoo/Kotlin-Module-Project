@@ -8,7 +8,7 @@ class CreateArchiveScreen(nextScreen: (Screens, InfoObject?) -> Unit, exitScreen
             MenuNavigation.archives.add(Archive(archName!!))
             exit()
         } else {
-            println("Вы не ввели текст, попробуйте еще")
+            MenuNavigation.printNullText()
             printContent()
         }
     }
